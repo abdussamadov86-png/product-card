@@ -1,2 +1,92 @@
-"body { background: red; }" 
-"/* Task 3 completed */" 
+body {
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  overflow: auto;
+}
+
+.cards-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  width: 1068px;
+  margin: 0 auto;
+}
+
+.product-card {
+  width: 340px;
+  height: 573px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  background-color: #f8f9fa;
+  padding: 24px 20px 20px;
+  transition: 0.2s;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.page-title {
+  font-size: 70px;
+  color: #515076;
+  line-height: 78px;
+  padding: 0;
+  margin: 0 0 30px 0;
+  text-align: center;
+}
+
+.product-title {
+  font-size: 12px;
+  color: #a5a3b9;
+  line-height: 24px;
+  padding: 0;
+  margin: 0;
+}
+
+.product-subtitle {
+  font-size: 20px;
+  color: #515076;
+  line-height: 27px;
+}
+
+.title-product-action {
+  font-size: 13px;
+  color: #515076;
+  line-height: 18px;
+}
+
+ul {
+  font-size: 13px;
+  color: #515076;
+  line-height: 18px;
+}
+
+.title-list {
+  font-size: 13px;
+  color: #515076;
+  line-height: 18px;
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 2px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.title-price {
+  font-size: 20px;
+  color: #515076;
+  line-height: 24px;
+}
+
+.price {
+  font-size: 20px;
+  color: #515076;
+  line-height: 24px;
+}
