@@ -1,4 +1,9 @@
 body {
+  background-image: url("img/fon_photo.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   font-family: Arial, sans-serif;
   font-size: 13px;
   overflow: auto;
