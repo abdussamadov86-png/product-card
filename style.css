@@ -1,6 +1,6 @@
 body {
   
-  font-family: Arial, sans-serif;
+  font-family: 'Montserrat', Arial, sans-serif;
   font-size: 13px;
   overflow: auto;
 }
@@ -20,6 +20,9 @@ body {
 }
 
 .product-card {
+  border: black;
+  border-style: solid;
+  border-width: medium;
   width: 340px;
   height: 573px;
   flex-shrink: 0;
@@ -62,10 +65,11 @@ body {
   line-height: 18px;
 }
 
-ul {
+.list {
   font-size: 13px;
   color: #515076;
   line-height: 18px;
+  list-style-type: circle;
 }
 
 .title-list {
@@ -78,8 +82,9 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 14px;
+  margin-top: auto;
   padding-top: 12px;
+  padding-bottom: 12px;
   border-top: 2px;
   font-weight: 600;
   font-size: 16px;
