@@ -38,12 +38,8 @@ function outputeLog(message) {
 
 // Кнопка изменения цвета
 const colorChangeButton = document.querySelector(".color-change-button");
+
 colorChangeButton.addEventListener("click", () => {
-  if (colorChangeButton.classList.contains("active")) {
-    colorChangeButton.classList.remove("active");
-    colorChangeButton.classList.add("active-2");
-  } else {
-    colorChangeButton.classList.remove("active-2");
-    colorChangeButton.classList.add("active");
-  }
+  colorChangeButton.classList.toggle("active");
+  colorChangeButton.classList.toggle("active-2");
 });
