@@ -88,3 +88,19 @@ body {
 .products__item {
   width: 340px;
 }
+
+.color-change-button {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  background-color: #ccc;
+  transition: background-color 0.2s;
+}
+
+.color-change-button.active {
+  background-color: rgb(255, 145, 0);
+}
+
+.color-change-button.active-2 {
+  background-color: rgb(153, 0, 255);
+}
