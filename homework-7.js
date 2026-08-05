@@ -1,8 +1,8 @@
 //Вывод в консоль лог: город и температуру
-function infTemperCity(city, temperature) {
+function showTemperature(city, temperature) {
   console.log(`Сейчас в городе ${city} температура — ${temperature} градусов по Цельсию`);
 }
-infTemperCity('Махачкала', 36);
+showTemperature('Махачкала', 36);
 
 //Вывод в консоль лог: по заднному параметру вывод скорости света
 const SPEEDLIGHT = 299792;
@@ -15,8 +15,8 @@ function checkSpeed(speed) {
     console.log('Субсветовая скорость');
   }
 }
-checkSpeed(390000);
-checkSpeed(90000);
+checkSpeed(400000);
+checkSpeed(40000);
 checkSpeed(299792);
 
 //Вывод в консоль лог: покупка синхрофазотрона
@@ -31,8 +31,8 @@ function buyProduct(myBalance) {
     console.log(`Вам не хватает ${difference}$, пополните баланс`);
   }
 }
-buyProduct(250_000);
-buyProduct(2_500_000);
+buyProduct(150_000);
+buyProduct(2_500_000_000);
 
 //Функция выбора любимой марки авто (Создать 1 функцию и именовать её по своему усмотрению)
 
