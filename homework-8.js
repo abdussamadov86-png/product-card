@@ -180,7 +180,7 @@ function markRareBooks(booksArray) {
 
 }
     
-const rareBooks = markRareBooks(allBooks);
+const rareBooks = markRareBooks(allBooks)
 
 console.log('Редкие книги');
 console.log(rareBooks);
