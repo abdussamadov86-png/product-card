@@ -160,7 +160,7 @@ console.log(`Всего книг: ${allBooks.length}`);
 
 // функция сортировки книг по редкости
 
-function markRareBooks(booksArray) {
+function getRareBooks(booksArray) {
     return booksArray.map(book => {
         const newBook = { ...book };
         newBook.isRare = book.year > 2000;
@@ -168,7 +168,7 @@ function markRareBooks(booksArray) {
     });
 }
 
-const rareBooks = markRareBooks(allBooks);
+const rareBooks = getRareBooks(allBooks);
 
 console.log('Редкие книги');
 console.log(rareBooks);
