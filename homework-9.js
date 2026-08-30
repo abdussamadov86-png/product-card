@@ -32,7 +32,7 @@ function reverseStringArr(strings1) {
 let strings1 = ["Сивак", "Миск", "Четки", "Книга", "Коврик"];
 let invertedString = reverseStringArr(strings1);
 
-console.log(strings1);
+console.log(invertedString);
 
 // Вывести в консоль массив комментариев юзеров с почтой ".com"
 let comEmail = comments.filter(comment => comment.email.includes(".com"));
