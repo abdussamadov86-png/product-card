@@ -66,3 +66,4 @@ if (cardCount === null) {
   const productsToShow = productCards.slice(0, cardCount);
   renderCards(productsToShow);
 }
+
