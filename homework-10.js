@@ -50,11 +50,13 @@ function renderCards(products) {
 
 // ЗАДАНИЕ 4: reduce
 const productDescription = productCards.reduce((acc, product) => {
-  acc[product.name] = product.description;
+  acc.push({
+    [product.name]: product.description
+  });
   return acc;
-}, {});
+}, []);
 
-console.log('Объект { название: описание }:');
+console.log('Массив объектов { название: описание }:');
 console.log(productDescription);
 
 // ЗАДАНИЕ 5: Запуск
