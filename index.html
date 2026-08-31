@@ -23,7 +23,7 @@
 
         <ul class="products clear-list">
           <li class="products__item card">
-            <img src="img/photo_1.jpg" alt="" class="card__image" />
+            <img src="img/mousse.jpg" alt="" class="card__image" />
             <span class="card__category">для нормальной кожи</span>
             <h2 class="card__name">Увлажняющий мусс</h2>
             <p class="card__description">
@@ -46,7 +46,7 @@
           </li>
 
           <li class="products__item card">
-            <img src="img/photo_2.jpg" alt="" class="card__image" />
+            <img src="img/mask.jpg" alt="" class="card__image" />
             <span class="card__category">для нормальной кожи</span>
             <h2 class="card__name">Увлажняющая маска</h2>
             <p class="card__description">
@@ -69,7 +69,7 @@
           </li>
 
           <li class="products__item card">
-            <img src="img/photo_3.jpg" alt="" class="card__image" />
+            <img src="img/gel.jpg" alt="" class="card__image" />
             <span class="card__category">для нормальной кожи</span>
             <h2 class="card__name">Гель для умывания</h2>
             <p class="card__description">
@@ -92,7 +92,7 @@
           </li>
 
           <li class="products__item card">
-            <img src="img/photo_4.jpg" alt="" class="card__image" />
+            <img src="img/gifts_1.jpg" alt="" class="card__image" />
             <span class="card__category">для нормальной кожи</span>
             <h2>Подарочный набор №1</h2>
             <p class="card__description">
@@ -115,7 +115,7 @@
           </li>
 
           <li class="products__item card">
-            <img src="img/photo_5.jpg" alt="" class="card__image" />
+            <img src="img/gifts_2.jpg" alt="" class="card__image" />
             <span class="card__category">для нормальной кожи</span>
             <h2>Подарочный набор №5</h2>
             <p class="card__description">
@@ -140,10 +140,28 @@
         </ul>
       </div>
     </main>
+
+    <ul id="productCards-list"></ul>
+
+    <template id="productCards-template">
+      <li class="productCards-container">
+        <img class="productCards-image" src="img/mousse.jpg" alt="Фото товара">
+        <p class="productCards-name"></p>
+        <p class="productCards-purpose"></p>
+        <p class="productCards-description"></p>
+        <p class="productCards-compound">
+          Состав: <span class="compound__value"></span>
+        </p>
+        <p class="productCards-price">
+          Цена: <span class="product__value"></span>
+        </p>
+      </li>
+    </template>
     <script src="main.js"></script>
     <script src="homework-7.js"></script>
     <script src="script.js"></script>
     <script src="homework-8.js"></script>
-    <script type = "module" src="homework-9.js"></script>
+    <script type="module" src="homework-9.js"></script>
+    <script type="module" src="homework-10.js"></script>
   </body>
 </html>
