@@ -13,7 +13,7 @@ formSubscribe.addEventListener('submit', (event) => {
     formSubscribe.reset();
 });
 
-// модальное окно регистрации
+// модалка
 const registrationButton = document.getElementById('registration-button');
 const modal = document.getElementById('modal');
 const modalClose = document.getElementById('modal-close');
