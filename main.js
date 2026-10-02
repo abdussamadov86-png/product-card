@@ -8,6 +8,14 @@ import { Laptop, Phone } from './devices.js';
 import { Modal } from './Modal.js';
 import { Form } from './Form.js';
 
+// Импорты классов
+import { Coffee } from './Coffee.js';
+import { Tea } from './Tea.js';
+import { Lemonade } from './Lemonade.js';
+import { Smoothie } from './Smoothie.js';
+import { Cafe } from './Cafe.js';
+
+
 const macbook = new Laptop('Apple', 'MacBook Pro', 250000, 16);
 macbook.getInfo();
 macbook.getRam();
@@ -15,6 +23,21 @@ macbook.getRam();
 const iphone = new Phone('Apple', 'iPhone 15', 120000, 48);
 iphone.getInfo();
 iphone.getCamera();
+
+// кафе
+const cafe = new Cafe('Coffee Time', 'Махачкала');
+
+// напитки
+const cappuccino = new Coffee('Капучино', 'M', 250, 85, 'Арабика', 'Овсяное');
+const greenTea = new Tea('Зелёный чай', 'L', 150, 90, 'Жасминовый');
+const lemonade = new Lemonade('Лимонад', 'M', 180, 10, 'Лимон-мята');
+const smoothie = new Smoothie('Смузи', 'L', 320, 5, ['Банан', 'Клубника', 'Манго']);
+
+cafe.getInfo();
+cafe.orderDrink(cappuccino);
+cafe.orderDrink(greenTea);
+cafe.orderDrink(lemonade);
+cafe.orderDrink(smoothie);
 
 
 const modal = new Modal('modal');
