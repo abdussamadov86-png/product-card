@@ -22,5 +22,9 @@ export class Modal {
     this.overlay.classList.remove("overlay-showed");
     this.overlay.removeEventListener('click', this.closeOverlay);
   }
+
+  isOpen() {
+    return this.modal.classList.contains("modal-showed");
+  }
 }
 
