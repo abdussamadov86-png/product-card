@@ -27,7 +27,7 @@ export class Drink {
   // Приватный метод — приготовить
   #prepare() {
     console.log(`Готовим "${this.name}"...`);
-    this.setTemperature(80);
+    this.setTemperature(15);
   }
 
   // Публичный метод — подать напиток

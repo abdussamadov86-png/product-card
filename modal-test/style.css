@@ -1,0 +1,23 @@
+.overlay{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: none;
+}
+
+.overlay-showed{
+  display: block;
+}
+
+.modal{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background: rgba(255,255,255,1);
+  display: none;
+}
+
+.modal-showed{
+  display: block;
+}
