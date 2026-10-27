@@ -1,0 +1,55 @@
+[ 
+  {
+    "id": 1,
+    "name": "Muhammad",
+    "surname": "Abdullah",
+    "age": 30,
+    "email": "muhammad.abdullah@example.com",
+    "city": "Medina"
+  },
+
+  {
+    "id": 2,
+    "name": "Abubakr",
+    "surname": "Usman",
+    "age": 25,
+    "email": "abubakr.usman@example.com",
+    "city": "Medina"
+  },
+
+  {
+    "id": 3,
+    "name": "Umar",
+    "surname": "Alhattab",
+    "age": 28,
+    "email": "umar.alhattab@example.com",
+    "city": "Medina"
+  },
+
+  {
+    "id": 4,
+    "name": "Usman",
+    "surname": "Affan",
+    "age": 32,
+    "email": "usman.affan@example.com",
+    "city": "Medina"
+  },
+
+  {
+    "id": 5,
+    "name": "Ali",
+    "surname": "Abutalib",
+    "age": 27,
+    "email": "ali.abutalib@example.com",
+    "city": "Medina"
+  },
+
+  {
+    "id": 6,
+    "name": "Umar",
+    "surname": "Abdulaziz",
+    "age": 29,
+    "email": "umar.abdulaziz@example.com",
+    "city": "Medina"
+  }
+]
