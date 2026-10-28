@@ -1,41 +1,48 @@
 const save = localStorage.getItem("users");
-const statusE1 = document.getElementById("status");
-const containerE1 = document.getElementById("users-container");
+const statusEl = document.getElementById("status");
+const containerEl = document.getElementById("users-container");
 
 async function loadUsers() {
-  statusE1.textContent = "Загрузка данных...";
+  statusEl.textContent = "Загрузка данных...";
   try {
-  const response = await fetch("users.json");
-  if (!response.ok) {
-    throw new Error("Данные не загружены");
-  }
-  const data = await response.json();
-  localStorage.setItem("users", JSON.stringify(data));
-  renderUsers(data);
+    const response = await fetch("users.json");
+    if (!response.ok) {
+      throw new Error("Данные не загружены");
+    }
+    const data = await response.json();
+    localStorage.setItem("users", JSON.stringify(data));
+    renderUsers(data);
   } catch (error) {
-    statusE1.textContent = "Данные не загружены!";
+    statusEl.textContent = "Данные не загружены!";
     console.error(error);
   }
 }
 
 function renderUsers(users) {
-  statusE1.textContent = "";
-  containerE1.innerHTML = "";
+  statusEl.textContent = "";
+  containerEl.innerHTML = "";
   users.forEach((user) => {
     const userCard = document.createElement("div");
     userCard.classList.add("user-card");
-    userCard.innerHTML = `
-      <h3>${user.name}</h3>
-      <p>${user.email}</p>
-      <button class="delete-user-button" data-id="${user.id}">Удалить</button>
-    `;
-    containerE1.appendChild(userCard);
+
+    const nameTitle = document.createElement("h3");
+    nameTitle.textContent = user.name;
+
+    const emailTitle = document.createElement("p");
+    emailTitle.textContent = user.email;
+
+    const deleteBtn = document.createElement("button");
+    deleteBtn.textContent = "Удалить";
+    deleteBtn.dataset.id = user.id;
+    deleteBtn.classList.add("delete-user-button");
+    userCard.append(nameTitle, emailTitle, deleteBtn);
+    containerEl.appendChild(userCard);
   });
 
   const deleteButtons = document.querySelectorAll(".delete-user-button");
   deleteButtons.forEach((button) => {
     button.addEventListener("click", (event) => {
-      const userId = event.target.getAttribute("data-id");
+      const userId = event.target.dataset.id;
       const updatedUsers = users.filter((user) => user.id !== parseInt(userId));
       localStorage.setItem("users", JSON.stringify(updatedUsers));
       renderUsers(updatedUsers);
@@ -44,9 +51,9 @@ function renderUsers(users) {
 }
 
 if (save) {
-  statusE1.textContent = "Данные загружены!";
-    const users = JSON.parse(save);
-    renderUsers(users);
+  statusEl.textContent = "Данные загружены!";
+  const users = JSON.parse(save);
+  renderUsers(users);
 } else if (!localStorage.getItem("isDeleted")) {
   loadUsers();
 }
@@ -54,8 +61,8 @@ if (save) {
 const deleteAllButton = document.getElementById("delete-all");
 deleteAllButton.addEventListener("click", () => {
   localStorage.removeItem("users");
-  containerE1.innerHTML = "";
-  statusE1.textContent = "Все карточки удалены!";
+  containerEl.innerHTML = "";
+  statusEl.textContent = "Все карточки удалены!";
   localStorage.setItem("isDeleted", "true");
 });
 
@@ -64,8 +71,8 @@ showAllButton.addEventListener("click", () => {
   const savedUsers = localStorage.getItem("users");
   if (savedUsers) {
     const users = JSON.parse(savedUsers);
-    if (containerE1.children.length === users.length) {
-      statusE1.textContent = "Все карточки уже отображены!";
+    if (containerEl.children.length === users.length) {
+      statusEl.textContent = "Все карточки уже отображены!";
     } else {
       renderUsers(users);
     }
