@@ -1,4 +1,4 @@
-const save = localStorage.getItem("users");
+const storageUsers = localStorage.getItem("users");
 const statusEl = document.getElementById("status");
 const containerEl = document.getElementById("users-container");
 
@@ -21,6 +21,7 @@ async function loadUsers() {
 function renderUsers(users) {
   statusEl.textContent = "";
   containerEl.innerHTML = "";
+
   users.forEach((user) => {
     const userCard = document.createElement("div");
     userCard.classList.add("user-card");
@@ -33,26 +34,23 @@ function renderUsers(users) {
 
     const deleteBtn = document.createElement("button");
     deleteBtn.textContent = "Удалить";
-    deleteBtn.dataset.id = user.id;
     deleteBtn.classList.add("delete-user-button");
-    userCard.append(nameTitle, emailTitle, deleteBtn);
-    containerEl.appendChild(userCard);
-  });
+    deleteBtn.dataset.id = user.id;
 
-  const deleteButtons = document.querySelectorAll(".delete-user-button");
-  deleteButtons.forEach((button) => {
-    button.addEventListener("click", (event) => {
-      const userId = event.target.dataset.id;
-      const updatedUsers = users.filter((user) => user.id !== parseInt(userId));
+    deleteBtn.addEventListener("click", (event) => {
+      const updatedUsers = users.filter((u) => u.id !== user.id);
       localStorage.setItem("users", JSON.stringify(updatedUsers));
       renderUsers(updatedUsers);
     });
+
+    userCard.append(nameTitle, emailTitle, deleteBtn);
+    containerEl.appendChild(userCard);
   });
 }
 
-if (save) {
+if (storageUsers) {
   statusEl.textContent = "Данные загружены!";
-  const users = JSON.parse(save);
+  const users = JSON.parse(storageUsers);
   renderUsers(users);
 } else if (!localStorage.getItem("isDeleted")) {
   loadUsers();
